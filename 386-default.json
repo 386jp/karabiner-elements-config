@@ -1,0 +1,255 @@
+{
+	"title": "Karabiner Elements Confiig for 386",
+	"rules": [
+		{
+		"description": "コマンドキーを単体で押したときに、英数・かなをトグルで切り替える。",
+		"manipulators": [
+			{
+			"type": "basic",
+			"conditions": [
+				{
+				"input_sources": [
+					{
+					"language": "ja"
+					}
+				],
+				"type": "input_source_if"
+				}
+			],
+			"from": {
+				"key_code": "left_command",
+				"modifiers": {
+				"optional": [
+					"any"
+				]
+				}
+			},
+			"parameters": {
+				"basic.to_if_held_down_threshold_milliseconds": 100
+			},
+			"to": [
+				{
+				"key_code": "left_command",
+				"lazy": true
+				}
+			],
+			"to_if_held_down": [
+				{
+				"key_code": "left_command"
+				}
+			],
+			"to_if_alone": [
+				{
+				"key_code": "japanese_eisuu"
+				}
+			]
+			},
+			{
+			"type": "basic",
+			"conditions": [
+				{
+				"input_sources": [
+					{
+					"language": "en"
+					}
+				],
+				"type": "input_source_if"
+				}
+			],
+			"from": {
+				"key_code": "left_command",
+				"modifiers": {
+				"optional": [
+					"any"
+				]
+				}
+			},
+			"parameters": {
+				"basic.to_if_held_down_threshold_milliseconds": 100
+			},
+			"to": [
+				{
+				"key_code": "left_command",
+				"lazy": true
+				}
+			],
+			"to_if_held_down": [
+				{
+				"key_code": "left_command"
+				}
+			],
+			"to_if_alone": [
+				{
+				"key_code": "japanese_kana"
+				}
+			]
+			},
+			{
+			"type": "basic",
+			"conditions": [
+				{
+				"input_sources": [
+					{
+					"language": "ja"
+					}
+				],
+				"type": "input_source_if"
+				}
+			],
+			"from": {
+				"key_code": "right_command",
+				"modifiers": {
+				"optional": [
+					"any"
+				]
+				}
+			},
+			"parameters": {
+				"basic.to_if_held_down_threshold_milliseconds": 100
+			},
+			"to": [
+				{
+				"key_code": "right_command",
+				"lazy": true
+				}
+			],
+			"to_if_held_down": [
+				{
+				"key_code": "right_command"
+				}
+			],
+			"to_if_alone": [
+				{
+				"key_code": "japanese_eisuu"
+				}
+			]
+			},
+			{
+			"type": "basic",
+			"conditions": [
+				{
+				"input_sources": [
+					{
+					"language": "en"
+					}
+				],
+				"type": "input_source_if"
+				}
+			],
+			"from": {
+				"key_code": "right_command",
+				"modifiers": {
+				"optional": [
+					"any"
+				]
+				}
+			},
+			"parameters": {
+				"basic.to_if_held_down_threshold_milliseconds": 100
+			},
+			"to": [
+				{
+				"key_code": "right_command",
+				"lazy": true
+				}
+			],
+			"to_if_held_down": [
+				{
+				"key_code": "right_command"
+				}
+			],
+			"to_if_alone": [
+				{
+				"key_code": "japanese_kana"
+				}
+			]
+			}
+		]
+		},
+		{
+			"description": "[Finder] Deleteキーでゴミ箱にファイルを捨てる",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "delete_forward",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [
+						{
+							"key_code": "delete_or_backspace",
+							"modifiers": [
+								"left_command"
+							]
+						}
+					],
+					"conditions": [
+						{
+							"type": "frontmost_application_if",
+							"bundle_identifiers": [
+								"^com.apple.finder"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"description": "[Finder] Returnキーでファイルを開き、F2キーで名前の変更",
+			"manipulators": [
+				{
+					"conditions": [
+						{
+							"bundle_identifiers": [
+								"^com.apple.finder"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "f2"
+					},
+					"to": [
+						{
+							"key_code": "return_or_enter"
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"conditions": [
+						{
+							"bundle_identifiers": [
+								"^com.apple.finder"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"from": {
+						"key_code": "return_or_enter"
+					},
+					"to": [
+						{
+							"key_code": "o",
+							"modifiers": [
+								"right_command"
+							]
+						}
+					],
+					"type": "basic"
+				}
+			]
+		}
+
+
+
+
+
+
+
+	]
+}
