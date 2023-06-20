@@ -251,7 +251,7 @@
 					"conditions": [
 						{
 							"bundle_identifiers": [
-								"^^com\\.cisco\\.anyconnect\\."
+								"^com.cisco.anyconnect.gui"
 							],
 							"type": "frontmost_application_if"
 						}
