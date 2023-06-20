@@ -257,11 +257,11 @@
 						}
 					],
 					"from": {
-						"pointing_button": "button1"
+						"key_code": "a"
 					},
 					"to": [
 						{"key_code": "japanese_eisuu"},
-						{"pointing_button": "button1"}
+						{"key_code": "a"}
 					],
 					"type": "basic"
 				}
