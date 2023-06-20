@@ -256,10 +256,12 @@
 							"type": "frontmost_application_if"
 						}
 					],
+					"from": {
+						"pointing_button": "button3"
+					},
 					"to": [
-						{
-							"key_code": "japanese_eisuu"
-						}
+						{"key_code": "japanese_eisuu"},
+						{"pointing_button": "button3"}
 					],
 					"type": "basic"
 				}
