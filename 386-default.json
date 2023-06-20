@@ -251,17 +251,17 @@
 					"conditions": [
 						{
 							"bundle_identifiers": [
-								"^com.cisco.anyconnect.gui"
+								"^com.cisco.anyconnect"
 							],
 							"type": "frontmost_application_if"
 						}
 					],
 					"from": {
-						"pointing_button": "button3"
+						"pointing_button": "button1"
 					},
 					"to": [
 						{"key_code": "japanese_eisuu"},
-						{"pointing_button": "button3"}
+						{"pointing_button": "button1"}
 					],
 					"type": "basic"
 				}
