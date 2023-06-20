@@ -243,11 +243,28 @@
 					"type": "basic"
 				}
 			]
+		},
+		{
+			"description": "[AnyConnect] AnyConnectアプリを開いたときに英数に切り替える",
+			"manipulators": [
+				{
+					"conditions": [
+						{
+							"bundle_identifiers": [
+								"^com.cisco.anyconnect.gui"
+							],
+							"type": "frontmost_application_if"
+						}
+					],
+					"to": [
+						{
+							"key_code": "japanese_eisuu"
+						}
+					],
+					"type": "basic"
+				}
+			]
 		}
-
-
-
-
 
 
 
