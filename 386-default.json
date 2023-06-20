@@ -250,10 +250,10 @@
 				{
 					"conditions": [
 						{
+							"type": "frontmost_application_if",
 							"bundle_identifiers": [
-								"^com.cisco.anyconnect.gui"
-							],
-							"type": "frontmost_application_if"
+								"^com\\.cisco\\.anyconnect\\.gui$"
+							]
 						}
 					],
 					"from": {
